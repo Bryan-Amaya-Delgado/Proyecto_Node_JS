@@ -1,0 +1,11 @@
+'use stric'
+
+var express = require('express');
+var UsuarioControl = require('../controlador/control');
+var api = express.Router();
+
+api.get('/probando-controlador', UsuarioControl.prueba);
+api.post('/registro', UsuarioControl.registrarUsuario);
+api.post('/login', UsuarioControl.accesoUsuario);
+
+module.exports = api;
